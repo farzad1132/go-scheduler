@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	env := environment.SimpleEnv{}
+	env := environment.MonolithicEnv{}
 	env.Initialize()
 
-	env.Run(50)
+	env.Run(100)
 }
