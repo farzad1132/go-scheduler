@@ -131,6 +131,8 @@ func (e *MonolithicEnv) Run(n int) {
 		case <-timeout:
 			quit <- "End from Control Plane"
 			fmt.Print("End of program")
+			<-time.After(500 * time.Millisecond)
+			return
 		}
 	}
 }
